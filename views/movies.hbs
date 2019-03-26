@@ -1,0 +1,12 @@
+<section class="container mt-5">
+  <h2 class="mb-4 text-center">Listado de películas</h2>
+  <div class="row">
+    {{#each movies}}
+      <article class="col-md-3 text-center mb-4">
+        <img src="{{this.image}}" alt="{{this.title}}" class="img-fluid" />
+        <h5 class="mt-2">{{this.title}}</h5>
+        <a class="btn btn-sm btn-outline-primary" href="/movies/{{this._id}}">Ver más</a>
+      </article>
+    {{/each}}
+  </div>
+</section>

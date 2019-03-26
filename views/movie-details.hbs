@@ -1,0 +1,23 @@
+<section class="container mt-5">
+  <h2 class="mb-4 text-center">{{movie.title}}</h2>
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <img src="{{movie.image}}" alt="{{movie.title}}" class="img-fluid" />
+    </div>
+    <div class="col-md-8">
+      <p><strong>Director:</strong> {{movie.director}}</p>
+      <p><strong>Reparto:</strong></p>
+      <ul>
+        {{#each movie.stars}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+      <p>{{movie.description}}</p>
+      <p><strong>Horarios:</strong>
+        {{#each movie.showtimes}}
+          <span>{{this}}{{#unless @last}}, {{/unless}}</span>
+        {{/each}}
+      </p>
+    </div>
+  </div>
+</section>
